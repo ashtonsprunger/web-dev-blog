@@ -1,7 +1,11 @@
+const BASE_URL = process.env.NODE_ENV === "development" ? "" : "/web-dev-blog";
+
 const postsFilepaths = [
-  process.env.PUBLIC_URL +
+  BASE_URL +
+    process.env.PUBLIC_URL +
     "/api/posts/keeping-manual-testing-concepts-in-mind.md",
-  process.env.PUBLIC_URL +
+  BASE_URL +
+    process.env.PUBLIC_URL +
     "/api/posts/the-value-of-seo-to-front-end-developers.md",
 ];
 
