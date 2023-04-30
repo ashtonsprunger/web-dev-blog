@@ -4,7 +4,7 @@ import html from "remark-html";
 import postsFilepaths from "./postsFilepaths";
 
 async function loadPostContent(filepath) {
-  const response = await fetch(filepath);
+  const response = await fetch(`${process.env.REACT_APP_BASE_URL}${filepath}`);
   const fileContent = await response.text();
   return fileContent;
 }
